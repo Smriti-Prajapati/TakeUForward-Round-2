@@ -59,11 +59,11 @@ const TopSection = () => (
     <Card style={{ padding: "16px" }}>
       <p style={{ fontSize: "11px", color: "#9ca3af", marginBottom: "2px" }}>Company activation</p>
       <p style={{ fontSize: "30px", fontWeight: 800, margin: "0 0 14px", color: "#0f172a" }}>40%</p>
-      <StatsRow dot="#f59e0b" label="👋Signed up"   value="100%" />
-      <StatsRow dot="#6366f1" label="⚙️Setup"        value="80%"  />
-      <StatsRow dot="#f97316" label="🌓Aha moment"   value="60%"  />
-      <StatsRow dot="#8b5cf6" label="🤯Activated"    value="40%"  />
-      <StatsRow dot="#6b7280" label="🏃‍♂️Active"       value="80%"  />
+      <StatsRow label="👋Signed up"   value="100%" />
+      <StatsRow label="⚙️Setup"        value="80%"  />
+      <StatsRow label="🌓Aha moment"   value="60%"  />
+      <StatsRow label="🤯Activated"    value="40%"  />
+      <StatsRow label="🏃‍♂️Active"       value="80%"  />
     </Card>
   </div>
 );
@@ -122,7 +122,23 @@ const MilestoneSection = () => (
         <span style={{ fontSize: "11px", color: "#374151" }}>⚡ Last seen</span>
         <span style={{ backgroundColor: "#bbf7d0", color: "#15803d", fontSize: "11px", fontWeight: 700, padding: "1px 8px", borderRadius: "20px" }}>today</span>
       </div>
-      <p style={{ fontFamily: "cursive", fontSize: "15px", color: "#374151", margin: "12px 0 4px 8px" }}>Also done for you</p>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: "12px 0 4px 8px" }}>
+        <p style={{ fontFamily: "cursive", fontSize: "15px", color: "#374151", margin: "0 0 2px" }}>Also done for you</p>
+        {/* Hand-drawn curly arrow */}
+        <svg width="70" height="40" viewBox="0 0 70 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 8 C15 20, 25 30, 40 28 C50 27, 55 20, 52 14"
+            stroke="#1e293b" strokeWidth="1.8" fill="none"
+            strokeLinecap="round" strokeLinejoin="round"
+          />
+          {/* arrowhead */}
+          <path
+            d="M52 14 L58 18 M52 14 L56 8"
+            stroke="#1e293b" strokeWidth="1.8"
+            strokeLinecap="round" strokeLinejoin="round"
+          />
+        </svg>
+      </div>
       <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
         <div style={{ flex: 1, height: "1px", backgroundColor: "#22c55e" }} />
         <span style={{ fontSize: "11px", color: "#374151" }}>⚡ Activated</span>
